@@ -3,6 +3,7 @@ module Rapidfire
     before_filter :authenticate_administrator!, except: :index
 
     def index
+      logger.debug("Created logger")
       @surveys = Survey.all
     end
 
